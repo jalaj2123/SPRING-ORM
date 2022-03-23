@@ -1,0 +1,12 @@
+package com.webkorps.Dao;
+import com.webkorps.model;
+import com.webkorps.model.Alien;
+public class AlienDao {
+
+	{
+		Alien getAlien(int aid)
+		{
+			Alien a1=new Alien();
+		}
+	}
+}

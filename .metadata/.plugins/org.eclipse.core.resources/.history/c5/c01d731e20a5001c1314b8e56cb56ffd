@@ -1,0 +1,19 @@
+<html>
+
+<head>
+
+<style>  
+body {  
+    background-color: linen;  
+}     
+</style> 
+</head>
+<body>
+<marquee behavior="scroll" direction="right"><h2>Mvc Maven</h2></marquee>
+<form action="GetAlien">
+<input type="text" name="aid"/>
+<input type="submit" value="submit">
+
+</form>
+</body>
+</html>

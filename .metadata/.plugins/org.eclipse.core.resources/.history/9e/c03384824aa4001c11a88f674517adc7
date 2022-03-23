@@ -1,0 +1,8 @@
+package com.webkorps.model;
+
+public class Alien {
+
+	private int aid;
+	private String 
+
+}

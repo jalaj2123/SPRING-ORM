@@ -1,0 +1,5 @@
+package com.webkorps.model;
+
+public class Alien {
+
+}

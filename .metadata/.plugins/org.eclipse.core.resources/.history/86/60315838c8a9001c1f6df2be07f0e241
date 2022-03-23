@@ -1,0 +1,25 @@
+package com.spring.ci;
+
+public class Person
+{
+	private String name;
+	private int perid;
+	
+	public Person(String name, int perid)
+	{
+		this.name = name;
+		this.perid = perid;
+	
+		
+	}
+	@Override
+	public String toString() 
+	{
+	
+		return this.name+ ":" +this.perid;
+		
+	}
+	
+	
+	}
+
