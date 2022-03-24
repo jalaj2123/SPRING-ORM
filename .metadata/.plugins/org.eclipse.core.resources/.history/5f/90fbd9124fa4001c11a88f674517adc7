@@ -1,8 +1,0 @@
-package com.webkorps.Dao;
- import com.webkorps.model.*;
-public class AlienDao {
-
-	{
-		public Alien 
-	}
-}
