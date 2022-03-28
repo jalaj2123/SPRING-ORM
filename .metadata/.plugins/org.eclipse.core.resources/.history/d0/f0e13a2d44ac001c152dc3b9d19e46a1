@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+    
+ <bean class="org.springframework.orm.hibernate5.HibernateTemplate.LocalSessionFactoryBean"   name="factory">
+ <property name="dataSource" ref="ds"/>
+ <property name="hibernatProperties">
+ 
+ <props>
+ <prop key="hibernate.dialect"></prop>
+  <prop key="hibernate.show_sql"></prop>
+ <prop key="hibernate.hbm2ddl.auto"></prop>
+ </props>
+ 
+ <property name="AnnotatedClasses">
+ <list>
+ <value>com.orm.entities.Student</value>
+ </list>
+ </property>
+ </bean>
+    
+ <bean class="org.springframework.orm.hibernate5.HibernateTemplate" name="hiberTemplate">
+<property name="SessionFactory" ref="factory"/>
+  </bean>
+  
+    <bean class="com.orm.dao" name="StudentDao">
+    <property name="hiber" ref="hiberTemplate"/>
+    </bean>
+    </beans>   

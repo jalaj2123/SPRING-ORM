@@ -1,0 +1,36 @@
+package com.hiber.spring.Hibern;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.hiber.spring.Persi.Emp;
+
+
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+   
+    	public static void main(String[] args) {
+    		// TODO Auto-generated method stub
+    		Configuration cfg=new Configuration();
+    		cfg.configure("com/hiber/spring/Hibern/hib.cfg.xml");
+    		SessionFactory factory=cfg.buildSessionFactory();
+    		Emp st=new Emp();
+    		st.setId(11);
+    		st.setName("jalaj");
+    		st.setCity("Gwalior");
+    		
+    		Session session=factory.getCurrentSession();
+    		Transaction tx=session.beginTransaction();
+    		session.save(st);
+    		tx.commit();
+    		session.close();
+    		
+    }
+}

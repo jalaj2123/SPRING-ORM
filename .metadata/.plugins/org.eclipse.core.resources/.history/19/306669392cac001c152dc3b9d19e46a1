@@ -1,0 +1,16 @@
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class Save {
+	public static void main(String[] args) {
+        Session sesssion =new Configuration().configure().buildSessionFactory().openSession();
+        Transaction tx=sesssion.beginTransaction();
+       
+        int i=(int) sesssion.save(a1);
+        int j=(int) sesssion.save(a2);
+        tx.commit();
+        sesssion.close();
+        System.out.println(i+" "+j+"added");
+	}
+}

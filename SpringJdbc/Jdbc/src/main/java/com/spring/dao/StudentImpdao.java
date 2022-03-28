@@ -2,6 +2,8 @@ package com.spring.dao;
 
 
 
+import java.util.List;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -28,10 +30,11 @@ int r=this.jdbcTemplate.update(query,student.getId(),student.getName(),student.g
 	int r=this.jdbcTemplate.update(query,student.getName(),student.getCity(),student.getId());
 		return r;
 	}
-	public int delete(Student student) {
+	public int delete(int studentid) 
+	{
 		// TODO Auto-generated method stub
 		String query="delete from student where id=?";
-		int r=this.jdbcTemplate.update(query,student.getId());
+		int r=this.jdbcTemplate.update(query,studentid);
 	
 		return r;
 	}
@@ -40,6 +43,11 @@ int r=this.jdbcTemplate.update(query,student.getId(),student.getName(),student.g
 		String query="select * from student where id=?";
 		RowMapper<Student> rowMapper=new RowMapperimpl();
 		Student student=this.jdbcTemplate.queryForObject(query, rowMapper,studentid);
+		return student;
+	}
+	public List<Student> GetAllStudent() {
+		String query="select*from student";
+	List<Student> student=this.jdbcTemplate.query(query, new RowMapperimpl());
 		return student;
 	}
 	

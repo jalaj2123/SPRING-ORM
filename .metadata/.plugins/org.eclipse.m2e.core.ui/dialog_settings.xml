@@ -44,6 +44,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Webkorps\SpringMvc"/>
+			<item value="C:\Webkorps\SpringJdbc"/>
 			<item value="C:\Webkorps\Webap"/>
 			<item value="C:\Webkorps\example\WebContent\index.html"/>
 		</list>
@@ -58,17 +60,23 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.spring.mvc"/>
+			<item value="com.spring.jdbc"/>
 			<item value="com.spring"/>
 			<item value="com.Springcore.springcore"/>
 			<item value="com.Webkorps.Webap"/>
 			<item value="com.Webkorps.WebApp"/>
 		</list>
 		<list key="groupId">
+			<item value="com.spring.mvc"/>
+			<item value="com.spring.jdbc"/>
 			<item value="com.spring"/>
 			<item value="com.Springcore"/>
 			<item value="com.Webkorps"/>
 		</list>
 		<list key="artifactId">
+			<item value="SpringMvc"/>
+			<item value="Jdbc"/>
 			<item value="springcore"/>
 			<item value="Webap"/>
 			<item value="WebApp"/>
